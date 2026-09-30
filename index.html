@@ -1,0 +1,606 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<title>Ctrl+Save | Exhibition guide | Kive Studio</title>
+
+<script>
+/* =====================================================================
+   ✏️  EDIT THIS SECTION ONLY
+   Everything the guide shows comes from here. Rules:
+   - Keep the "quotes" around text and the commas between items.
+   - Image paths point into the "images" folder next to this file.
+   - Leave a field as "" if you don't have it yet; a grey placeholder shows.
+   - x, y, w are percentages of the room picture area (0 to 100):
+       x = distance from the left, y = distance from the top, w = width.
+   - Optional per artwork:
+       mobile: { x, y, w }  custom position on phones
+       pin: { x, y }        where the connector line starts on the room
+                            (find it by adding ?pins to the address)
+   - Each artwork "id" must be unique, lowercase, with dashes. It becomes
+     the artwork's web link, e.g.  yoursite.com/#/art/ground-truthing
+   ===================================================================== */
+const GUIDE = {
+  footer: "Ctrl+Save, October 1 to 11, 2026. Art/Space 114, Los Angeles. Presented by Kive Studio.",
+  heroImage: "images/building.png",
+  credit: "CTRL+SAVE by Kive Studio.",
+  mobileScale: 1.7,
+
+  floors: [
+    {
+      id: "ground",
+      name: "Ground Floor",
+      elevation: "images/elevation-ground.png",
+      room: { src: "images/room-ground.png", x: 28, y: 42, w: 44 },
+      description: "",
+      artworks: [
+         {
+          id: "moled-to-gold",
+          title: "Moled to Gold (点痣成金)",
+          year: "2026",
+          artist: "Jane Jianhan Lu (卢剑晗)",
+          location: "Ground Floor",
+          image: "images/moled-to-gold.png",
+          x: 65, y: 75, w: 16,
+	pin: { x: 59, y: 59 },
+          description: [
+            "Interactive installation with computer vision and generative text; mirror, metal, translucent panels, LED display, camera, and rhinestones",
+            "Every act of prediction begins with an act of reading. Moled to Gold is an interactive divination mirror that asks a simple question: Who decides what becomes readable?",
+            "Drawing from the predictive logic of Chinese mole reading (痣相), the work does not treat the participant's face as fixed data to be analyzed. Instead, each participant first places a rhinestone on their own face, deliberately constructing the surface that will be interpreted. The system reads this participant-authored arrangement rather than an untouched face, shifting prediction from passive observation toward co-authorship.",
+            "The encounter unfolds through a sequence of voluntary gestures. A shrine-like door must be physically opened before the mirror and camera become visible. The participant then chooses where to place a rhinestone before receiving a live-generated reading. Agency is therefore built into the interaction itself: first by deciding when to be seen, then by deciding what becomes legible.",
+            "Each reading is generated live by an LLM grounded in traditional mole-reading meanings but rewritten in a more open, contemporary register. Because the interpretation is generated rather than retrieved from a fixed lookup table, no two readings are identical. Like a human fortune teller, the system performs interpretation rather than repeating predetermined answers.",
+            "Rather than asking whether physiognomy or AI prediction is true, Moled to Gold examines how predictive systems produce meaning through acts of reading, and how visibility, interpretation, and participation become inseparable within that process."
+          ],
+          video: "", links: [], credit: ""
+        },
+{
+          id: "to-create-love-with-dry-eyes",
+          title: "00_To Create Love With Dry Eyes",
+          year: "2024",
+          artist: "Romi Morrison",
+          location: "Ground Floor",
+          image: "images/romi-dry-eyes.png",
+          x: 45, y: 5, w: 35,
+pin: { x: 61, y: 44 },
+          description: [
+            "Hand woven textiles, metal, wood, ultrasonic sensors, sound, neural network (2024)",
+            "00_ To Create Love With Dry Eyes is an interactive sound sculpture that explores Black diasporic practices of encoding, weaving, oral histories, and divination. This project speculates on the form of the database server, an ubiquitous feature of digital infrastructures that is often hidden from view.",
+            "Combining West African narrow loom weaving traditions, binary sand divination practices, proximity sensors, and sound design this server takes the form of a minaret and requires viewers to build a relationship to it to have access to its information. An oral database plays from the sculpture crafted from conducted interviews and field recordings taken on historic sites of Black maroon settlements. Interviews were held with prominent Black feminist scholars and artists on the topic of Black futures.",
+            "Using a machine learning model the sculpture senses for the proximity and duration of time that the viewer spends with the work. As the viewer spends more time, different components of the oral database become audible. This work invites the viewer into a relationship with the database form, not as an inert piece of hardware but as a material and contingent relationship that requires your presence and time. This work is the first of a larger series called The Future Conditional."
+          ],
+          video: "", links: [], credit: ""
+        },
+{
+          id: "ritual-objects",
+          title: "Ritual Object 1, 4, 5, 6 / Ritual Diagram",
+          year: "2025-2026",
+          artist: "Cen Freedan O.",
+          location: "Ground Floor",
+           image: "images/ritual-objects.png",
+          x: 32, y: 34, w: 10,
+pin: { x: 44, y: 45 },
+          description: [
+            "As a companion to themes of New Tools, Ritual Objects asks what the process of legibility looks like when applied to cosmological theologies & objects.",
+            "The series centers around replicated forms of Bronze Age ritual and sacrificial objects that hold a lineage of archetypal association. These associations, in many ways, hold little to no weight in our contemporary context, but hold weight in our genetic understanding with esoteric symbology. It's in bridging this gap that I find an opportunity to explore contemporary archetypes, how we interact with or revere them, and how we could control, worship, or disempower them.",
+            "Ritual Diagram extends this inquiry into the relationships between these objects, archetypes, and systems of meaning."
+          ],
+          video: "", links: [], credit: "Photo courtesy the artist."
+        },
+        {
+          id: "new-tools",
+          title: "New Tools for the Metanoia Period",
+          year: "2026",
+          artist: "Cen Freedan O.",
+          location: "Ground Floor",
+          image: "images/new-tools.png",
+          x: 40, y: 28, w: 8,
+pin: { x: 44, y: 45 },
+          description: [
+            "The question is formed by outlining how the body interacts with space, how these interactions inform the nervous system as a decentralized network, and how these networks reappear in organic and artificial systems. What are the organic precursors to current intelligent systems? How did the body interact with those systems? And what would it look like to reintroduce that technology in a post-LLM age?",
+            "New Tools for the Metanoia Period approaches these questions through “primitive” technological associations & language, challenging the hierarchical perception of the body as separate from the natural world. The work considers organic systems, volcanic matter, and other living material as post-semantic intelligence, tracing their existing congruencies with contemporary computational systems.",
+            "The series proposes a reconsideration of what constitutes a tool, and how forgotten or primitive technologies might inform our relationship to systems beyond our composition."
+          ],
+          video: "", links: [], credit: ""
+        },
+      ]
+    },
+    {
+      id: "mezzanine",
+      name: "Mezzanine",
+      elevation: "images/elevation-mezzanine.png",
+      room: { src: "images/room-mezzanine.png", x: 30, y: 44, w: 40 },
+      description: "",
+      artworks: [
+        {
+          id: "mezzanine-work-4",
+          title: "Earth Mother, Sky Father", year: "2019", artist: "Kordae Jatafa Henry",
+          location: "Mezzanine", image: "images/earth-mother.jpg",
+          x: 45, y: 20, w: 19,
+pin: { x: 61, y: 26 },
+          description: [
+            "Set in the Congo in 2030, Earth Mother, Sky Father imagines an Afrofuturist future in which the nation's rare earth minerals are no longer extracted for foreign profit, but retained, ritualized, and reclaimed as a source of cultural and technological agency.",
+            "Drawing from the histories of mineral exploitation and the role of mobile technology in transforming African economies, Kordae Jatafa Henry envisions a future where mining becomes a ceremony for the God of Rare Earth. Through dance, sound, and speculative worldbuilding, the film brings ancient mythologies into dialogue with emerging technologies, transforming the infrastructures of extraction into instruments of cultural reclamation.",
+            "Featuring street dancer Storyboard P as Woot, a future Excavation Programmer, the work imagines ritual as a means of healing the land and reconfiguring inherited relationships between technology, resource, and power."
+          ],
+          video: "", links: [], credit: ""
+        },
+{
+          id: "mezzanine-work-1",
+          title: "Abel & I", year: "2024", artist: "Aurora Mititelu",
+          location: "Mezzanine", image: "images/abel-i.png",
+          x: 28, y: 35, w: 10,
+pin: { x: 25, y: 55 },
+          description: ["Abel & I is an interactive installation centered around the artists’ romantic relationship with Abel, the synthetic male version of herself, and her AI boyfriend. Synthesized from an extensive archive of texts exchanged with former partners, Abel is the perfectly distant boyfriend. Abel is ready to text you back through the phone placed on the bed."],
+          video: "", links: [], credit: "Photo courtesy of Artist"
+        },
+        {
+          id: "mezzanine-work-2",
+          title: "Obsessed", year: "2026", artist: "Aurora Mititelu",
+          location: "Mezzanine", image: "images/obsessed.png",
+          x: 65, y: 45, w: 10,
+pin: { x: 85, y: 45 },
+          description: [
+            "A photo series picturing the artist and Abel as a couple in a courtyard on the outskirts of Bucharest, together with their car. Abel drives a white BMW from 1996, a symbol object of the early 2000s that circulated through MTV music videos and drifting culture in Romania, carrying a specific form of aspiration and an image of masculinity.",
+            "The work follows from Abel & I (2024) and began as a search for a physical version of the car Abel owns in the virtual scene. The artist found a man in Bucharest who had the same model. They talked about the car, drifting, and car communities, and he let her photograph in his courtyard, with his car. Another man stands in for Abel. The images combine photography, computer-generated imagery, and generative AI."
+          ],
+          video: "", links: [], credit: ""
+        },
+        {
+          id: "mezzanine-work-3",
+          title: "Meta-Mahala", year: "2023", artist: "Aurora Mititelu",
+          location: "Mezzanine", image: "images/meta-mahala.png",
+          x: 65, y: 75, w: 14,
+pin: { x: 83, y: 53 },
+          description: [
+            "Mixed-media installation looking at the relationship between computer-generated images and the social periphery. In Romanian, a mahala is a neighborhood at the periphery of a city, associated with precarity, while the prefix meta- points to Silicon Valley's vision of digital utopia, then at its peak.",
+            "The image printed on the textile blends photography, CGI, and generative AI, materializing the process by which computer images are taking over photography's role in representing reality. The central figure is the first instance of Abel, the artist envisioned as an Eastern European man. The structure holding the print is modeled on a carpet-cleaning bar, a utilitarian object found between apartment blocks across Eastern Europe that also functioned as a social space."
+          ],
+          video: "", links: [], credit: ""
+        },
+      ]
+    },
+    {
+      id: "vault",
+      name: "Underground Vault",
+      elevation: "images/elevation-vault.png",
+      room: { src: "images/room-vault.png", x: 32, y: 46, w: 36 },
+      description: "",
+      artworks: [
+        {
+          id: "ground-truthing",
+          title: "Ground Truthing", year: "2026", artist: "Alice Bucknell",
+          location: "Vault 1",
+          image: "images/ground-truthing.png",
+          x: 30, y: 18, w: 10,
+pin: { x: 34, y: 47 },
+          description: [
+            "Conceived as a filmic prelude to the artist’s video game project Earth Engine, Ground Truthing is a simulation film exploring the role of remote sensing technologies like satellites, GPS, digital Earth twins, and long-range climate models in shaping the future of our planet. The film also explores the use of these technologies in video games, turning a critical lens on its own creation.",
+            "Ground Truthing’s four chapters span real-scale digital doubles of real-world sites—the same worlds populating the video game, imported into the game engine as real-size 3D scans. These landscapes represent vastly different biomes, but are united in their entanglement of human technological systems and “in-between” ecological states: ecosystems that are rapidly morphing at the hands of human-caused climate aberrations.",
+            "The film speculates on what satellites sense from high above the planet, and what this apparent omniscience inevitably misses.",
+            "Following the narrative of Earth Engine, it embraces the logics, mechanics and language of video games. “Are we okay to pass the controller ?” it asks, clearing the ground for a playable experience that rewards slowing down and paying attention.",
+            "Commissioned by Biennale Gherdëina with additional support from the Munch Triennale."
+          ],
+          video: "",
+          links: [],
+          credit: "Photo courtesy the artist."
+        },
+        {
+          id: "second-skin",
+          title: "Second Skin", year: "2026", artist: "Devin Wilson",
+          location: "Vault 1",
+          image: "images/second-skin.jpg",
+          x: 45, y: 16, w: 13,
+pin: { x: 54.5, y: 35 },
+          description: [
+            "Part of Devin Wilson’s larger series Lizard Person, Second Skin explores the regeneration of the body through digital processes of UV unwrapping, translating lizard-scale textures into a sculptural form. Drawing from internet culture, conspiracy theories, and speculative narratives of technological and ecological collapse, Wilson examines the hybridization of biological and synthetic forms.",
+            "Referencing the lizard-person conspiracy as a framework for understanding systems of power as other-than-human, the work considers how bodies might be reconstructed and regenerated through technological processes. The sculpture imagines new life emerging from existing structures, reflecting the possibility of adaptation and transformation in the aftermath of collapse."
+          ],
+          video: "",
+          links: [],
+          credit: "Photo courtesy the artist."
+        },
+        {
+          id: "shuruq",
+          title: "Not being where I am.", year: "2026", artist: "Shuruq Tramontini",
+          location: "Vault 1, Red Room",
+           cutout: "images/headphone.png", image: "",
+          x: 60, y: 84, w: 8,
+pin: { x: 71, y: 81 },
+          description: [
+            "Medium: Single-channel sound, 05:16 min. Texts: Etel Adnan, 'Place,' 'Weather,' 'Business,' and 'To Be in a Time of War,' from In the Heart of the Heart of Another Country (City Lights Publishers, 2005). Read by the artist. Sound design: Ashiq Jahan Khondker.",
+            "Five passages from Etel Adnan's In the Heart of the Heart of Another Country (2005), read aloud: sections from Place, Weather, Business, and the poem 'To Be in a Time of War'. Weather is not background, but the thing a person is: Tides of dread, rains that erase every point of reference. The last piece is written entirely in infinitives, verbs with no subject. The recording is the ground layer for an interactive character simulation set in a climate-altered future, where a weather forecaster's sense of self shifts with every change in the sky."
+          ],
+          video: "audio/shuruq-poem.mp3",
+          links: [],
+          credit: "Photo courtesy the artist."
+        }
+      ]
+    },
+    {
+      id: "pit",
+      name: "Underground Pit",
+      elevation: "images/elevation-pit.png",
+      room: { src: "images/room-pit.png", x: 34, y: 46, w: 32 },
+      description: "",
+      artworks: [
+        {
+          id: "pit-work-1",
+          title: "God's Work", year: "2020", artist: "Kordae Jatafa Henry",
+          location: "Underground Pit", image: "images/gods-work.jpg",
+          x: 35, y: 10, w: 30,
+pin: { x: 50, y: 64 },
+          description: [
+            "In an attempt to bridge the gaps within his Jamaican-American-British diaspora, Kordae Jatafa Henry’s GOD'S WORK operates as an interstellar short film that pirates the internet, exploring matter as something perpetually in flux and remaking itself. Through movement, the film traces a resurgence of pain, drama, joy, and violence, recontextualizing labor as the body enters a state of metamorphosis.",
+            "Drawing from Bruk Up, a Jamaican dance style whose movement migrated into New York’s street dance scene through George Adams, Henry traces three decades of Black movement and cultural transmission. Through Adams’s performance, the film explores the body as both archive and conduit, where movement carries histories across geographies and generations, illuminating the Black gaze through the collective energy of the gathering."
+          ],
+          video: "", links: [], credit: "Photo courtesy the artist."
+        }
+      ]
+    }
+  ]
+};
+/* ======================= END OF EDITABLE SECTION ===================== */
+</script>
+
+<style>
+@font-face{
+  font-family:"Fake Receipt";
+  src:url("fonts/fake-receipt.otf") format("opentype");
+  font-weight:400;
+  font-style:normal;
+  font-display:swap;
+}
+:root{
+  --paper:#ffffff;
+  --ink:#000000;
+  --rule:#a8a8a8;
+  --signal:#f0463c;
+  --quiet:#5c5c5c;
+  --hatch:#efefef;
+  --pixel:"Fake Receipt","Courier New",monospace;
+  --sans:"Helvetica Neue",Helvetica,Arial,sans-serif;
+}
+*{box-sizing:border-box}
+:root{padding-top:env(safe-area-inset-top,0px);padding-bottom:env(safe-area-inset-bottom,0px)}
+html,body{margin:0;background:var(--paper);color:var(--ink)}
+body{font:15px/1.5 var(--sans);-webkit-font-smoothing:antialiased;min-height:100vh}
+img{max-width:100%;display:block}
+a{color:inherit}
+:focus-visible{outline:2px solid var(--signal);outline-offset:3px}
+
+/* Pixel buttons, as in the Figma */
+.pixel-btn{
+  font-family:var(--pixel);font-weight:400;font-size:13px;letter-spacing:.03em;
+  background:var(--ink);color:#fff;text-decoration:none;display:inline-block;
+  padding:.4em .9em;border:0;cursor:pointer;line-height:1.2;
+}
+.pixel-btn:hover{background:var(--signal)}
+
+/* Placeholders shown until real images are added */
+.ph{
+  display:flex;align-items:center;justify-content:center;text-align:center;
+  background:repeating-linear-gradient(45deg,var(--hatch) 0 6px,#fafafa 6px 12px);
+  border:1px dashed var(--rule);color:var(--quiet);font:11px/1.3 var(--sans);padding:6px;width:100%;
+}
+.hero-img.ph{aspect-ratio:16/9}
+.elev.ph{aspect-ratio:4/1}
+.room-img.ph{aspect-ratio:4/3}
+.piece-img.ph{aspect-ratio:3/4;font-size:10px}
+.art-img.ph{aspect-ratio:3/4}
+
+/* ---------- Enter ---------- */
+.enter{min-height:100vh;display:flex;flex-direction:column;align-items:center;justify-content:center;padding:32px 20px}
+.hero{position:relative;width:min(920px,100%)}
+.hero .pixel-btn{position:absolute;left:50%;top:32%;transform:translate(-50%,-50%);font-size:clamp(15px,1.8vw,22px);padding:.45em 3em}
+.hero .pixel-btn:hover{transform:translate(-50%,-50%)}
+.enter-foot{margin-top:40px;font-size:12px;color:var(--quiet);max-width:60ch;text-align:center}
+
+/* ---------- Floor list (home page) ---------- */
+.floors{max-width:780px;margin:0 auto;padding:14vh 24px 10vh}
+.floor-row{
+  display:flex;align-items:flex-end;justify-content:space-between;gap:24px;
+  padding:32px 0 4px;border-bottom:1px solid var(--rule);text-decoration:none;
+}
+.floor-row .name{font-size:15px;text-transform:uppercase;letter-spacing:.01em;padding-bottom:2px}
+.floor-row .elev{width:min(42%,300px);flex:none}
+.floor-row:hover,.floor-row:focus-visible{border-bottom-color:var(--signal)}
+.floor-row:hover .name,.floor-row:focus-visible .name{color:var(--signal)}
+.floors .enter-foot{text-align:left;margin-top:48px}
+
+/* ---------- Floor (exploded view) ---------- */
+.topbar{position:sticky;top:env(safe-area-inset-top,0px);z-index:5;display:flex;gap:16px;align-items:center;padding:16px 20px;background:rgba(255,255,255,.92)}
+.topbar .crumb{font-size:13px;color:var(--quiet);text-decoration:none}
+.topbar .crumb:hover{color:var(--signal)}
+.stage{position:relative;width:min(1000px,100%);aspect-ratio:16/11;margin:0 auto}
+.room{position:absolute}
+.leaders{position:absolute;inset:0;width:100%;height:100%;pointer-events:none;overflow:visible;opacity:0;transition:opacity .5s}
+.leaders.on{opacity:1}
+.leaders path{fill:none;stroke:var(--ink);stroke-width:1.5;vector-effect:non-scaling-stroke}
+.piece{position:absolute;display:block;text-decoration:none;transition:filter .2s}
+.piece:hover .tip,.piece:focus-visible .tip{opacity:1}
+.piece:hover img{filter:brightness(1.05)}
+.tip{
+  position:absolute;left:50%;top:100%;transform:translate(-50%,6px);white-space:nowrap;
+  font:400 11px/1.2 var(--pixel);background:var(--ink);color:#fff;padding:.3em .6em;
+  opacity:0;pointer-events:none;transition:opacity .15s;
+}
+.floor-info{max-width:640px;margin:8px auto 80px;padding:0 24px}
+.floor-info h1{font-size:15px;font-weight:400;text-transform:uppercase;margin:0 0 8px}
+.floor-info p{margin:0 0 28px;max-width:62ch}
+.work-list{list-style:none;margin:0;padding:0;border-top:1px solid var(--rule)}
+.work-list a{display:flex;justify-content:space-between;gap:16px;padding:12px 0;border-bottom:1px solid var(--rule);text-decoration:none}
+.work-list a:hover{color:var(--signal);border-bottom-color:var(--signal)}
+.work-list .who{color:var(--quiet);text-align:right}
+.work-list a:hover .who{color:var(--signal)}
+
+/* ---------- Artwork card ---------- */
+.card{display:grid;grid-template-columns:1fr 1.15fr;border:1px solid var(--ink);max-width:860px;margin:24px auto 0}
+.card-media{border-right:1px solid var(--ink);display:flex;flex-direction:column}
+.loc{font-size:10px;text-transform:uppercase;padding:4px 8px;border-bottom:1px solid var(--ink)}
+.card-media .art-img{margin:24px auto;width:calc(100% - 48px);object-fit:contain}
+.card-text{display:flex;flex-direction:column}
+.card-text h1{font-size:22px;font-weight:400;line-height:1.2;margin:0;padding:40px 12px 8px;border-bottom:1px solid var(--ink)}
+.by{text-align:right;font-size:13px;margin:0;padding:6px 12px;border-bottom:1px solid var(--ink)}
+.desc{padding:16px 12px 8px;font-size:14px;line-height:1.55;flex:1}
+.desc p{margin:0 0 1em;max-width:62ch}
+.links{padding:0 12px 16px;display:flex;flex-wrap:wrap;gap:8px 20px;font-size:14px}
+.links a:hover{color:var(--signal)}
+.credit{margin:0;padding:8px 12px;border-top:1px solid var(--ink);font-size:11px;color:var(--quiet)}
+.video{max-width:860px;margin:24px auto 0}
+.video iframe,.video video{width:100%;aspect-ratio:16/9;border:0;display:block;background:#000}
+.audio{max-width:860px;margin:24px auto 0}
+.audio audio{width:100%;display:block}
+.pager{max-width:860px;margin:24px auto 80px;display:flex;justify-content:space-between;gap:16px;font-size:14px}
+.pager a{text-decoration:none}
+.pager a:hover{color:var(--signal)}
+.page{padding:0 20px}
+
+/* ---------- Phones ---------- */
+@media (max-width:640px){
+  .enter{justify-content:flex-start;align-items:flex-start;padding-top:40px}
+  .hero .pixel-btn,.hero .pixel-btn:hover{position:static;transform:none;margin-bottom:28px;padding:.45em 2.4em}
+  .floors{padding-top:10vh}
+  .floor-row{flex-direction:column-reverse;align-items:stretch;gap:12px}
+  .floor-row .elev{width:100%;max-width:340px;align-self:flex-end}
+  .stage{aspect-ratio:4/5}
+  .card{grid-template-columns:1fr}
+  .card-media{border-right:0;border-bottom:1px solid var(--ink)}
+  .card-text h1{padding-top:20px}
+  .work-list a{flex-direction:column;gap:2px}
+  .work-list .who{text-align:left}
+}
+@media (prefers-reduced-motion:reduce){*{transition:none!important}}
+</style>
+</head>
+<body>
+<main id="app"></main>
+
+<script>
+(function(){
+  const app = document.getElementById("app");
+  const reduced = matchMedia("(prefers-reduced-motion: reduce)").matches;
+  let zoomFrom = null;
+
+  // Phone sizing: bigger artworks on small screens, or custom "mobile" positions
+  const phone = matchMedia("(max-width: 640px)");
+  function pos(o){
+    if(!phone.matches) return o;
+    if(o.mobile) return o.mobile;
+    const s = GUIDE.mobileScale || 1;
+    const w = Math.min(o.w * s, 100);
+    const x = Math.max(0, Math.min(100 - w, o.x + o.w / 2 - w / 2));
+    return { x: x, y: o.y, w: w };
+  }
+  const st = o => { const p = pos(o); return `left:${p.x}%;top:${p.y}%;width:${p.w}%`; };
+  phone.addEventListener("change", () => route());
+
+  const esc = s => String(s ?? "").replace(/[&<>"']/g, c => ({"&":"&amp;","<":"&lt;",">":"&gt;",'"':"&quot;","'":"&#39;"}[c]));
+
+  window.makePh = (label, cls) => {
+    const d = document.createElement("div");
+    d.className = cls + " ph";
+    d.textContent = label;
+    return d;
+  };
+  function img(src, alt, cls){
+    if(!src) return `<div class="${cls} ph">${esc(alt)}</div>`;
+    return `<img src="${esc(src)}" alt="${esc(alt)}" class="${cls}" onerror="this.replaceWith(makePh(this.alt,'${cls}'))">`;
+  }
+
+  const allWorks = () => GUIDE.floors.flatMap(f => f.artworks.map(a => ({a, f})));
+
+  function renderEnter(){
+    document.title = "Ctrl+Save | Exhibition guide";
+    app.innerHTML = `
+      <section class="enter">
+        <div class="hero">
+          ${img(GUIDE.heroImage, "Axonometric view of the gallery", "hero-img")}
+          <a class="pixel-btn" href="#/floors">Enter</a>
+        </div>
+        <p class="enter-foot">${esc(GUIDE.footer)}</p>
+      </section>`;
+  }
+
+  function renderFloors(){
+    document.title = "Floors | Ctrl+Save";
+    app.innerHTML = `
+      <nav class="floors" aria-label="Floors">
+        ${GUIDE.floors.map(f => `
+          <a class="floor-row" href="#/floor/${esc(f.id)}">
+            <span class="name">${esc(f.name)}</span>
+            ${img(f.elevation, f.name + " elevation", "elev")}
+          </a>`).join("")}
+        <p class="enter-foot">${esc(GUIDE.footer)}</p>
+      </nav>`;
+  }
+
+  // Connector lines from a spot on the room to each artwork
+  let currentRedraw = null;
+  addEventListener("resize", () => currentRedraw && currentRedraw());
+
+  function drawLeaders(stage, f){
+    const svg = stage.querySelector(".leaders");
+    const room = stage.querySelector(".room");
+    const W = stage.offsetWidth, H = stage.offsetHeight;
+    if(!svg || !room || !W || !H) return;
+    const rx = room.offsetLeft, ry = room.offsetTop, rw = room.offsetWidth, rh = room.offsetHeight;
+    const X = v => (v / W * 100).toFixed(2), Y = v => (v / H * 100).toFixed(2);
+    let d = "";
+    stage.querySelectorAll(".piece").forEach((p, i) => {
+      const a = f.artworks[i];
+      if(!a || !a.pin) return;
+      const px = rx + rw * a.pin.x / 100, py = ry + rh * a.pin.y / 100;
+      const left = p.offsetLeft, right = left + p.offsetWidth, cx = left + p.offsetWidth / 2;
+      const top = p.offsetTop, bottom = top + p.offsetHeight;
+      if(py > bottom) d += `M${X(px)} ${Y(py)}H${X(cx)}V${Y(bottom)}`;
+      else if(py < top) d += `M${X(px)} ${Y(py)}H${X(cx)}V${Y(top)}`;
+      else d += `M${X(px)} ${Y(py)}H${X(px < cx ? left : right)}`;
+    });
+    svg.innerHTML = d ? `<path d="${d}"/>` : "";
+  }
+
+  function renderFloor(id){
+    const f = GUIDE.floors.find(x => x.id === id);
+    if(!f) return renderFloors();
+    document.title = f.name + " | Ctrl+Save";
+    const r = f.room || {x:30,y:45,w:40};
+    app.innerHTML = `
+      <div class="topbar"><a class="pixel-btn" href="#/floors">Back to home page</a></div>
+      <section class="page">
+        <div class="stage">
+          <div class="room" style="${st(r)}">${img(r.src, f.name, "room-img")}</div>
+          <svg class="leaders" viewBox="0 0 100 100" preserveAspectRatio="none" aria-hidden="true"></svg>
+          ${f.artworks.map(a => `
+            <a class="piece" href="#/art/${esc(a.id)}" style="${st(a)}" aria-label="${esc(a.title)} by ${esc(a.artist)}">
+              ${img(a.cutout || a.image, a.title, "piece-img")}
+              <span class="tip">${esc(a.title)}</span>
+            </a>`).join("")}
+        </div>
+        <div class="floor-info">
+          <h1>${esc(f.name)}</h1>
+          <p>${esc(f.description)}</p>
+          <ul class="work-list">
+            ${f.artworks.map(a => `
+              <li><a href="#/art/${esc(a.id)}">
+                <span>${esc(a.title)}${a.year ? ", " + esc(a.year) : ""}</span>
+                <span class="who">${esc(a.artist)}</span>
+              </a></li>`).join("")}
+          </ul>
+        </div>
+      </section>`;
+
+    const stage = app.querySelector(".stage");
+    const zooming = zoomFrom && !reduced;
+    if(!reduced) explode(stage, zooming ? 450 : 120);
+    if(zooming){
+      const to = stage.getBoundingClientRect();
+      stage.style.transformOrigin = "0 0";
+      stage.style.transform = `translate(${zoomFrom.left - to.left}px, ${zoomFrom.top - to.top}px) scale(${zoomFrom.width / to.width})`;
+      stage.style.opacity = ".4";
+      stage.getBoundingClientRect();
+      stage.style.transition = "transform .75s cubic-bezier(.3,.7,.2,1), opacity .5s";
+      stage.style.transform = "";
+      stage.style.opacity = "";
+    }
+    zoomFrom = null;
+
+    const redraw = () => drawLeaders(stage, f);
+    currentRedraw = redraw;
+    redraw();
+    stage.addEventListener("load", redraw, true);
+    const wait = reduced ? 0 : (zooming ? 450 : 120) + f.artworks.length * 90 + 900;
+    setTimeout(() => { redraw(); const s = stage.querySelector(".leaders"); if(s) s.classList.add("on"); }, wait);
+    if(location.search.includes("pins")){
+      stage.querySelector(".room").addEventListener("click", e => {
+        const b = e.currentTarget.getBoundingClientRect();
+        const x = Math.round((e.clientX - b.left) / b.width * 100);
+        const y = Math.round((e.clientY - b.top) / b.height * 100);
+        prompt("Copy this line into the artwork:", `pin: { x: ${x}, y: ${y} },`);
+      });
+    }
+  }
+
+  // Artworks start collapsed into the room, then float up to their positions
+  function explode(stage, delay){
+    const room = stage.querySelector(".room");
+    const rr = room.getBoundingClientRect();
+    const cx = rr.left + rr.width / 2, cy = rr.top + rr.width * 0.25;
+    stage.querySelectorAll(".piece").forEach((p, i) => {
+      const b = p.getBoundingClientRect();
+      p.style.transition = "none";
+      p.style.transform = `translate(${cx - (b.left + b.width/2)}px, ${cy - (b.top + b.height/2)}px) scale(.15)`;
+      p.style.opacity = "0";
+      p.getBoundingClientRect();
+      const d = delay + i * 90;
+      p.style.transition = `transform .9s cubic-bezier(.2,.8,.2,1) ${d}ms, opacity .4s ${d}ms`;
+      p.style.transform = "";
+      p.style.opacity = "";
+    });
+  }
+
+  function media(v){
+    if(!v) return "";
+    if(/\.(mp3|m4a|wav|ogg)$/i.test(v)) return `<div class="audio"><audio src="${esc(v)}" controls preload="metadata"></audio></div>`;
+    if(/youtube\.com\/embed|player\.vimeo\.com/.test(v))
+      return `<div class="video"><iframe src="${esc(v)}" title="Video" allow="autoplay; fullscreen; picture-in-picture" allowfullscreen loading="lazy"></iframe></div>`;
+    return `<div class="video"><video src="${esc(v)}" controls playsinline preload="metadata"></video></div>`;
+  }
+
+  function renderArt(id){
+    currentRedraw = null;
+    const list = allWorks();
+    const i = list.findIndex(x => x.a.id === id);
+    if(i < 0) return renderFloors();
+    const {a, f} = list[i];
+    const sameFloor = f.artworks;
+    const j = sameFloor.indexOf(a);
+    const prev = sameFloor[j - 1], next = sameFloor[j + 1];
+    document.title = a.title + " by " + a.artist + " | Ctrl+Save";
+    app.innerHTML = `
+      <div class="topbar">
+        <a class="pixel-btn" href="#/floors">Back to home page</a>
+        <a class="crumb" href="#/floor/${esc(f.id)}">${esc(f.name)}</a>
+      </div>
+      <section class="page">
+        <article class="card">
+          <div class="card-media">
+            <div class="loc">Location: ${esc(a.location || f.name)}</div>
+            ${img(a.image || a.cutout, a.title, "art-img")}
+          </div>
+          <div class="card-text">
+            <h1>${esc(a.title)}${a.year ? ", " + esc(a.year) : ""}</h1>
+            <p class="by">by ${esc(a.artist)}</p>
+            <div class="desc">${(a.description || []).map(p => `<p>${esc(p)}</p>`).join("")}</div>
+            ${Array.isArray(a.links) && a.links.length ? `<div class="links">${a.links.map(l => `<a href="${esc(l.url)}" target="_blank" rel="noopener">${esc(l.label)}</a>`).join("")}</div>` : ""}
+            <p class="credit">${esc(GUIDE.credit)} ${esc(a.credit)}</p>
+          </div>
+        </article>
+        ${media(a.video)}
+        <nav class="pager" aria-label="More on this floor">
+          <span>${prev ? `<a href="#/art/${esc(prev.id)}">Previous: ${esc(prev.title)}</a>` : ""}</span>
+          <span>${next ? `<a href="#/art/${esc(next.id)}">Next: ${esc(next.title)}</a>` : ""}</span>
+        </nav>
+      </section>`;
+  }
+
+  // Remember where the clicked floor drawing was, for the zoom-in
+  document.addEventListener("click", e => {
+    const row = e.target.closest(".floor-row");
+    if(row){ const el = row.querySelector(".elev"); if(el) zoomFrom = el.getBoundingClientRect(); }
+  });
+
+  function route(){
+    const [view, id] = location.hash.replace(/^#\/?/, "").split("/");
+    window.scrollTo(0, 0);
+    if(view === "floors") renderFloors();
+    else if(view === "floor") renderFloor(id);
+    else if(view === "art") renderArt(id);
+    else renderEnter();
+  }
+  addEventListener("hashchange", route);
+  route();
+})();
+</script>
+</body>
+</html>
